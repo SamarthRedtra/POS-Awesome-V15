@@ -4,7 +4,6 @@
 import frappe
 from frappe import _
 from frappe.model.document import Document
-from posawesome.posawesome.api.payment_entry import create_payment_entry
 
 
 class MpesaPaymentRegister(Document):
