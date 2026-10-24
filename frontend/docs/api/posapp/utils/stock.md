@@ -12,7 +12,7 @@
 
 > **formatNegativeStockWarning**(`itemName`, `availableQty`, `requestedQty`): `string`
 
-Defined in: [posapp/utils/stock.ts:55](https://github.com/SamarthRedtra/POS-Awesome-V15/blob/d62c23c41dc2973350bc52ba6332a647550cc01e/frontend/src/posapp/utils/stock.ts#L55)
+Defined in: [posapp/utils/stock.ts:55](https://github.com/SamarthRedtra/POS-Awesome-V15/blob/4194ee3d2f3a50481db9dcd40a3c20d0a1a123e4/frontend/src/posapp/utils/stock.ts#L55)
 
 Formats a negative stock warning message.
 
@@ -48,7 +48,7 @@ Formatted translated string
 
 > **formatStockShortageError**(`itemName`, `availableQty`, `requestedQty`): `string`
 
-Defined in: [posapp/utils/stock.ts:36](https://github.com/SamarthRedtra/POS-Awesome-V15/blob/d62c23c41dc2973350bc52ba6332a647550cc01e/frontend/src/posapp/utils/stock.ts#L36)
+Defined in: [posapp/utils/stock.ts:36](https://github.com/SamarthRedtra/POS-Awesome-V15/blob/4194ee3d2f3a50481db9dcd40a3c20d0a1a123e4/frontend/src/posapp/utils/stock.ts#L36)
 
 Formats a stock shortage error message.
 
@@ -84,7 +84,7 @@ Formatted translated string
 
 > **parseBooleanSetting**(`value`): `boolean`
 
-Defined in: [posapp/utils/stock.ts:12](https://github.com/SamarthRedtra/POS-Awesome-V15/blob/d62c23c41dc2973350bc52ba6332a647550cc01e/frontend/src/posapp/utils/stock.ts#L12)
+Defined in: [posapp/utils/stock.ts:12](https://github.com/SamarthRedtra/POS-Awesome-V15/blob/4194ee3d2f3a50481db9dcd40a3c20d0a1a123e4/frontend/src/posapp/utils/stock.ts#L12)
 
 Parses a value into a boolean based on standard Frappe/POS settings.
 
