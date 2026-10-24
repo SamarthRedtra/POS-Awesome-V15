@@ -44,16 +44,24 @@ class MpesaPaymentRegister(Document):
         self.payment_entry = self.create_payment_entry()
 
     def create_payment_entry(self):
-        payment_entry = create_payment_entry(
-            self.company,
-            self.customer,
-            self.transamount,
-            self.currency,
-            self.mode_of_payment,
-            self.posting_date,
-            self.transid,
-            self.posting_date,
-            None,
-            self.submit_payment,
-        )
-        return payment_entry.name
+	    from posawesome.posawesome.api.payment_processing.creation import (
+	        create_payment_entry,
+	    )
+	
+	    payment_entry = create_payment_entry(
+	        company=self.company,
+	        amount=self.transamount,
+	        currency=self.currency,
+	        mode_of_payment=self.mode_of_payment,
+	        customer=self.customer,
+	        payment_type="Receive",
+	        reference_no=self.transid,
+	        reference_date=self.posting_date,
+	        posting_date=self.posting_date,
+	        submit=bool(self.submit_payment),
+	    )
+	
+	    if payment_entry.is_new():
+	        payment_entry.insert(ignore_permissions=True)
+	
+	    return payment_entry.name
